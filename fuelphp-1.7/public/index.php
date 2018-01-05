@@ -16,8 +16,6 @@
 error_reporting(-1);
 ini_set('display_errors', 1);
 
-define('FUEL_PATH', __DIR__.'/fuelphp-1.7');
-
 /**
  * Website document root
  */
@@ -26,17 +24,17 @@ define('DOCROOT', __DIR__.DIRECTORY_SEPARATOR);
 /**
  * Path to the application directory.
  */
-define('APPPATH', realpath(FUEL_PATH.'/fuel/app/').DIRECTORY_SEPARATOR);
+define('APPPATH', realpath(__DIR__.'/../fuel/app/').DIRECTORY_SEPARATOR);
 
 /**
  * Path to the default packages directory.
  */
-define('PKGPATH', realpath(FUEL_PATH.'/fuel/packages/').DIRECTORY_SEPARATOR);
+define('PKGPATH', realpath(__DIR__.'/../fuel/packages/').DIRECTORY_SEPARATOR);
 
 /**
  * The path to the framework core.
  */
-define('COREPATH', realpath(FUEL_PATH.'/fuel/core/').DIRECTORY_SEPARATOR);
+define('COREPATH', realpath(__DIR__.'/../fuel/core/').DIRECTORY_SEPARATOR);
 
 // Get the start time and memory for use later
 defined('FUEL_START_TIME') or define('FUEL_START_TIME', microtime(true));
